@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My tour blog</title>
+        <meta charset="utf-8"/>
+        <link href="styles/main.css" type="text/css" rel="stylesheet"/>
+        <script>
+                document.createElement('header');
+                document.createElement('nav');
+                document.createElement('section');
+                document.createElement('article');
+                document.createElement('aside');
+                document.createElement('footer');
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="links">
+                    <li><a href="index.html" class="active">主页</a></li>
+                    <li><a href="blog.html">旅行</a></li>
+                    <li><a href="gallery.html">相册集</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+            <div id="logo">
+                <img src="images/logocn.png"/>
+            </div>
+        </header>
+        <section id="home">
+            <div id="banner">
+                <img id="bannerImg" src="images/banner0.jpg"/>
+                <p id="place0">成长在路上</p>
+                <p id="place1">武汉</p>
+                <p id="place2">丽江</p>
+                <p id="place3">南京</p>
+            </div>
+            <div class="imgList">
+                <ul>
+                    <li><a href="gallery.html#2011"><img src="images/wuhan-home.jpg" alt="第1篇"/><p>2011</br>武汉</p></a></li>
+                    <li><a href="gallery.html#2012"><img src="images/lijiang-home.jpg" alt="第2篇"/><p>2013</br>丽江</p></a></li>
+                    <li><a href="gallery.html#2016"><img src="images/nanjing-home.jpg" alt="第3篇"/><p>2016</br>南京</p></a></li>
+                </ul>
+            </div>
+            <article class="home">
+                <h3><a href="blog.html#wuhan">武汉</a></h3>
+                <p>where are you</p>
+            </article>
+            <article class="home">
+                <h3><a href="blog.html#suzhou">丽江</a></h3>
+                <p>how are you</p>
+            </article>
+            <article class="home">
+                <h3><a href="blog.html#nanjing">南京</a></h3>
+                <p>how are you</p>
+            </article>
+        </section>
+        <footer>
+            <p>Copyright &copy; 2016.jsy.</p>
+        </footer>
+
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
