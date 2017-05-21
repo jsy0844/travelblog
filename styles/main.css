@@ -139,15 +139,17 @@ nav{
     border-radius: 10px;
 }
 .home h3{
-    font-weight: bold;
-    font-size: 1.3em;
-    color: #2e8b57;
     border-bottom: solid #aaaaaa 0.4px;
     padding-bottom: 6px;
 }
+.home a{
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #211156;
+}
 .home p{
     font-family: Arial, Helvetica, sans-serif;
-    color: #8ec7fa;
+    color: #000029;
     margin: 10px auto;
 }
 /*底部*/
@@ -247,7 +249,7 @@ footer p{
     border: groove 0.3px #90ee90;
 }
 #list a{
-    color: light#2e8b57;
+    color: #2e8b57;
 }
 .number{
     width: 40px;
@@ -264,7 +266,6 @@ footer p{
 .placePhoto{
     width: 600px;
     height: 337.5px;
-    border: solid 0.3px #90ee90; 
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -277,7 +278,7 @@ footer p{
 
 }
 .blog h3{
-    color: #add8e6;
+    color: #112233;
     text-align: center;
     margin-top: 30px;
 }
@@ -308,7 +309,7 @@ hr{
     margin: 0 auto;
     padding: 40px;
     border: solid 0.3px #90ee90;
-    background-color: #90ee90;
+    background-color: #eeeeee;
 }
 #contact form input{
     height: 30px;
