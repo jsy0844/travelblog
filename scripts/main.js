@@ -1,22 +1,15 @@
 $(function(){
-    var $link = $(".links li a");
-    $(".links li a").hover(function(){
-        $(this).addClass("linkhover");
-    },function(){
-        $(this).removeClass("linkhover");//不能改变a的文字颜色
-    })
-    /*主页图片自动切换,找一个替换的方法*/
+    /*主页图片自动切换*/
     var adTime = null;
-    var j=1;
     $("#bannerImg").hover(function(){
         if (adTime){
             clearInterval(adTime);
         }
     },function(){
         adTime = setInterval(function(){
+            var j=1;
+            autoChangeImage("#bannerImg",j);
             showBannerP("#place",j);
-            autochangeImage("#bannerImg",j);
-            //alert(imgSrc);
             j++;
             if(j==4){j=0;}
         },5000);
@@ -26,6 +19,7 @@ $(function(){
 
     //照片集页切换照片
     var m=4;  
+    var n;
     $("#next1").click(function(){
          var k=1;
          if(m<8){
@@ -42,7 +36,7 @@ $(function(){
          }
     })
     $("#prev1").click(function(){
-            k=1;
+            var k=1;
             if(m>5){
                 m=m-8;
                 for(n=0;n<4;n++){
@@ -75,7 +69,7 @@ $(function(){
          }
     })
     $("#prev2").click(function(){
-            k=1;
+            var k=1;
             if(p>5){
                 p=p-8;
                 for(n=0;n<4;n++){
@@ -108,7 +102,7 @@ $(function(){
          }
     })
     $("#prev3").click(function(){
-            k=1;
+            var k=1;
             if(q>5){
                 q=q-8;
                 for(n=0;n<4;n++){
@@ -135,32 +129,33 @@ $(function(){
                         left:"0px",
                         top:"0px"});
     })
-    //大屏显示照片
     //contact页
 })
 //相册集更换图片
-function changeImage(a,j,k){
-    var imgSrc = $(a).attr(k);
+function changeImage(imgId,j,attribute){
+    var imgSrc = $(imgId).attr(attribute);
     //alert(imgSrc);
     var i = imgSrc.lastIndexOf(".");
     var unit = imgSrc.substring(i);
     var imgName = imgSrc.substring(0,i-1);
-    imgSrc = imgName + j + unit;
-    $(a).attr(k,imgSrc);
+    imgName = imgName + j;
+    imgSrc = imgName + unit;
+    $(imgId).attr(attribute,imgSrc);
 }
 /*图片自动切换函数*/
-function autochangeImage(a,j){
-    var imgSrc = $(a).attr("src");
+function autoChangeImage(imgId,j){
+    var imgSrc = $(imgId).attr("src");
     //alert(imgSrc);
     var i = imgSrc.lastIndexOf(".");
     var unit = imgSrc.substring(i);
     var imgName = imgSrc.substring(0,i-1);
-    imgSrc = imgName + j + unit;
-    $(a).attr("src",imgSrc);
+    imgName = imgName + j;
+    imgSrc = imgName + unit;
+    $(imgId).attr("src",imgSrc);
 }
 //图片切换提示
-function showBannerP(b,j){
-    $(b+j).show().siblings("p").hide();
+function showBannerP(pId,j){
+    $(pId+j).show().siblings("p").hide();
 }
 //主页图片文字提示
 function showImageIntro(){
@@ -170,4 +165,3 @@ function showImageIntro(){
         $(this).find("p").fadeOut().stop(false,true);
     })   
 }
-//清空占位符
